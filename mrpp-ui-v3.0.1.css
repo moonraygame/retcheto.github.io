@@ -1,3 +1,19 @@
+.video-background {
+    background: #000;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
 div#mrpp-ui-container, div#alerts-container, div#minter-container {
     text-align: center;
 }
@@ -8,17 +24,17 @@ div#mrpp-alerts-wrapper>p.mrpp-alert {
 
 p.mrpp-alert.mrpp-alert--info {
     color: rgb(0, 148, 172);
-    background-color: rgb(218, 246, 250, 0.7);
+    background-color: rgb(218, 246, 250, 1);
 }
 
 p.mrpp-alert.mrpp-alert--error {
     color: rgb(198, 3, 22);
-    background-color: rgb(252, 223, 226, 0.7);
+    background-color: rgb(252, 223, 226, 1);
 }
 
 p.mrpp-alert.mrpp-alert--success {
     color: rgb(8, 153, 40);
-    background-color: rgb(223, 255, 230, 0.7);
+    background-color: rgb(223, 255, 230, 1);
 }
 
 div.mrpp-section {
@@ -26,10 +42,11 @@ div.mrpp-section {
     max-width: 600px;
     margin: 15px auto;
     padding: 30px;
-    background-color: rgba(58, 34, 6, 0.7);
+    background-color: rgba(0, 0, 0, 1);
     border-radius: 8px;
     box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
     color: white;
+    border: 1px solid rgba(255, 255, 255, 0.7);
     text-align: center;
     font-size: 1.3em;
 }
